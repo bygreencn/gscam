@@ -101,13 +101,17 @@ else()
   install(FILES nodelet_plugins.xml
     DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
     )
-
-  install(FILES
-    examples/v4l.launch
-    examples/gscam_nodelet.launch
-    examples/nodelet_pipeline.launch
+  
+  install(DIRECTORY launch examples
     DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
-    )
+  )
+
+  #install(FILES
+  #  examples/v4l.launch
+  #  examples/gscam_nodelet.launch
+  #  examples/nodelet_pipeline.launch
+  #  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
+  #  )
 
   install(FILES examples/uncalibrated_parameters.ini
     DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/examples
